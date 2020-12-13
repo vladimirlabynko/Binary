@@ -61,16 +61,16 @@ namespace Binary
            string result= HexStringToBinary(start);
             char[] arr;
             arr = result.ToCharArray(0, result.Length);
-            Console.WriteLine("Исходная строка : {0}", start);
-            Console.WriteLine("Бинарная строка : {0}", result);
+            Console.WriteLine("Исходная строка : {0}", start);//Given string    
+            Console.WriteLine("Бинарная строка : {0}", result);// converted string to bin
 
             for(int i=4; i<8; i++)
             {
                 myStringOutput += arr[i];
             }
             string firstparam = HexConverted(myStringOutput);
-            Console.WriteLine("Первый параметр в двоичной системе = {0}", myStringOutput);
-            Console.WriteLine("Первый параметр = {0}",firstparam);
+            Console.WriteLine("Первый параметр в двоичной системе = {0}", myStringOutput);// first parametr in binary
+            Console.WriteLine("Первый параметр = {0}",firstparam);//first parametr in HEX
 
             if (arr[6] == '1')
             {
@@ -83,11 +83,11 @@ namespace Binary
                 thirdparam += arr[i];
             }
            
-            Console.WriteLine("Второй параметр = {0}", arr[6]);
+            Console.WriteLine("Второй параметр = {0}", arr[6]);//second parametr
             string revthird = Reverse(thirdparam);
             string sp = HexConverted(revthird);
-            Console.WriteLine("Третий параметр в двоичной системе = {0}", revthird);
-            Console.WriteLine("Третий параметр = {0}", sp);
+            Console.WriteLine("Третий параметр в двоичной системе = {0}", revthird);//third parametr in binary
+            Console.WriteLine("Третий параметр = {0}", sp);// third parametr in hex
             Console.ReadKey();
         }
 
